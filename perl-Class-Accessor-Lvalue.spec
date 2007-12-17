@@ -13,7 +13,6 @@ BuildRequires:	perl-devel, perl-Want, perl-Class-Accessor
 # are not catching this
 Requires:	perl-Class-Accessor
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module subclasses Class::Accessor in order to provide lvalue
