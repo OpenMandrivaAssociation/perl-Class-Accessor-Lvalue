@@ -1,26 +1,30 @@
-%define real_name Class-Accessor-Lvalue
+%define upstream_name    Class-Accessor-Lvalue
+%define upstream_version 0.11
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_name}
+Release:	%mkrel 1
 
 Summary:	Class-Accessor-Lvalue module for perl 
-Name:		perl-%{real_name}
-Version:	0.11
-Release:	%mkrel 4
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel, perl-Want, perl-Class-Accessor
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildRequires: perl-Want
+BuildRequires: perl-Class-Accessor
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 # README says this is a dependency and automatic rpm dependencies
 # are not catching this
 Requires:	perl-Class-Accessor
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module subclasses Class::Accessor in order to provide lvalue
 accessor makers.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -40,5 +44,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Class/Accessor/Lvalue.pm
 %{perl_vendorlib}/Class/Accessor/Lvalue
 %{_mandir}/*/*
-
-
