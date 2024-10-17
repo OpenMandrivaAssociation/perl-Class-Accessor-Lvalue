@@ -8,7 +8,7 @@ Release:	5
 Summary:	Class-Accessor-Lvalue module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}
+URL:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/R/RC/RCLAMP/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
