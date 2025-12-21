@@ -11,6 +11,7 @@ Group:		Development/Perl
 URL:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/R/RC/RCLAMP/%{upstream_name}-%{upstream_version}.tar.bz2
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(Want)
 BuildRequires:	perl(Class::Accessor)
