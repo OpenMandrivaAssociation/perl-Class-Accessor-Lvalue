@@ -1,15 +1,13 @@
 %define upstream_name    Class-Accessor-Lvalue
-%define upstream_version 0.11
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.11
+Release:	7
 
 Summary:	Class-Accessor-Lvalue module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/Class-Accessor-Lvalue
-Source0:	https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Class-Accessor-Lvalue-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Class-Accessor-Lvalue-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,7 +23,7 @@ This module subclasses Class::Accessor in order to provide lvalue
 accessor makers.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
